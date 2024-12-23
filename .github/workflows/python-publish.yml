@@ -11,6 +11,12 @@ name: Upload Python Package
 on:
   release:
     types: [published]
+  push:
+    branches:
+      - main  # Trigger on pushes to the 'main' branch
+  pull_request:
+    branches:
+      - main  # Trigger on pull requests targeting 'main'
 
 permissions:
   contents: read
